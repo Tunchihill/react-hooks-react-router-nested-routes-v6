@@ -1,3 +1,5 @@
+
+import NavBar from "../components/NavBar";
 import { useRouteError } from "react-router-dom";
 
 function ErrorPage() {
@@ -5,10 +7,15 @@ function ErrorPage() {
   console.error(error);
 
   return (
-    <main>
+    <>
+      <header>
+        <NavBar />
+      </header>
+      <main>
         <h1>Whoops! Something went wrong!</h1>
-    </main>
+      </main>
+    </>
   );
-};
+}
 
 export default ErrorPage;
